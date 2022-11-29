@@ -16,7 +16,8 @@ const InputWrapper = styled.label`
   justify-content: space-between;
   align-items: center;
   padding: 6px 10px;
-  width: 33%;
+  width: 90%;
+  margin-left: 15px;
   position: relative;
   z-index: 0;
 
@@ -32,6 +33,11 @@ const InputWrapper = styled.label`
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+  }
+
+  @media screen and (min-width: 720px) {
+    width: 33%;
+    margin-left: 0;
   }
 `;
 
@@ -60,20 +66,25 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Header = () => {
-  return(
-    <Content>
+const Header = () => (
+  <Content>
+    <Button>
+      <img src={Logo} alt="Logo" />
+    </Button>
+    <InputWrapper>
+      <Input
+        type="text"
+        placeholder={
+          window.screen.width <= 720
+            ? "Searching for?"
+            : "What are u searching for?"
+        }
+      />
       <Button>
-        <img src={Logo} alt="Logo"/>
+        <img src={Search} alt="Lupa" />
       </Button>
-      <InputWrapper>
-        <Input type="text" placeholder="What are u searching for?"/>
-        <Button>
-          <img src={Search} alt="Lupa"/>
-        </Button>
-      </InputWrapper>
-    </Content>
-  );
-}
+    </InputWrapper>
+  </Content>
+);
 
 export default Header;
