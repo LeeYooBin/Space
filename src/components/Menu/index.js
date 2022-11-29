@@ -4,17 +4,37 @@ import Item from "../Item";
 import MenuItems from "../../utils/MenuItems";
 
 const Content = styled.nav`
-  width: 18%;
+  // width: 18%;
+  width: 100%;
+
+  @media screen and (min-width: 1000px) {
+    width: 18%;
+  }
 `;
 
 const List = styled.ul`
-  padding-left: 0.5rem;
+  // padding-left: 0.5rem;
+  padding: 0 0.5rem;
   margin: 0;
-  height: 276px;
+  // height: 276px;
+  height: 5vh;
   list-style: none;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+  align-items: flex-start;
+  overflow-x: scroll;
+
+  @media screen and (min-width: 500px) {
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1000px) {
+    padding-left: 0.5rem;
+    height: 276px;
+    flex-direction: column;
+    overflow: hidden;
+  }
 `;
 
 const Menu = () => (
