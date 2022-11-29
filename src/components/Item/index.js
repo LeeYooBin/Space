@@ -28,6 +28,7 @@ const Link = styled.a`
   font-size: 1.125rem;
   color: #d9d9d9;
   font-family: "GandhiSansRegular";
+  white-space: nowrap;
 `;
 
 const Item = ({ src, alt, text, href }) => (
