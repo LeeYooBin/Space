@@ -23,13 +23,11 @@ const Title = styled.h1`
   position: absolute;
   z-index: 1;
   color: #d9d9d9;
-  // font-size: 2.5rem;
   font-size: 1.2rem;
-  // width: 401px;
+  font-family: "GandhiSansBold";
+  font-weight: 700;
   width: 200px;
   height: 144px;
-  // top: 75px;
-  // left: 44px;
   top: 25%;
   left: 5%;
 
@@ -39,9 +37,9 @@ const Title = styled.h1`
   }
 
   @media screen and (min-width: 1000px) {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     width: 401px;
-    top: 75px;
+    top: 80px;
     left: 44px;
   }
 `;

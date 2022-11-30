@@ -4,7 +4,6 @@ import Item from "../Item";
 import MenuItems from "../../utils/MenuItems";
 
 const Content = styled.nav`
-  // width: 18%;
   width: 100%;
 
   @media screen and (min-width: 1000px) {
@@ -13,10 +12,8 @@ const Content = styled.nav`
 `;
 
 const List = styled.ul`
-  // padding-left: 0.5rem;
   padding: 0 0.5rem;
   margin: 0;
-  // height: 276px;
   height: 5vh;
   list-style: none;
   display: flex;
@@ -31,6 +28,7 @@ const List = styled.ul`
 
   @media screen and (min-width: 1000px) {
     padding-left: 0.5rem;
+    gap: 0;
     height: 276px;
     flex-direction: column;
     overflow: hidden;
