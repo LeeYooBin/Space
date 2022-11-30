@@ -4,14 +4,13 @@ import PropTypes from "prop-types";
 
 const Content = styled.li`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   :first-child {
     a {
       font-weight: 700;
       color: #7b78e5;
-      font-family: "GandhiSansRegular";
     }
   }
 `;
@@ -25,7 +24,7 @@ const Image = styled.img`
 
 const Link = styled.a`
   text-decoration: none;
-  font-size: 1.125rem;
+  font-size: 1.025rem;
   color: #d9d9d9;
   font-family: "GandhiSansRegular";
   white-space: nowrap;

@@ -49,6 +49,7 @@ const Input = styled.input`
   border: none;
   background-color: transparent;
   outline: 0;
+  font-family: "GandhiSansRegular";
 
   ::placeholder {
     font-size: 1rem;
