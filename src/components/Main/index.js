@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Menu from "../Menu";
 import Banner from "../Banner";
+import Gallery from "../Gallery";
 
 const Content = styled.main`
   max-width: 100vw;
@@ -32,6 +33,7 @@ const Main = () => (
       <Menu />
       <Banner />
     </Wrapper>
+    <Gallery />
   </Content>
 );
 

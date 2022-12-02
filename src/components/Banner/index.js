@@ -37,9 +37,9 @@ const Title = styled.h1`
   }
 
   @media screen and (min-width: 1000px) {
-    font-size: 2.7rem;
-    width: 401px;
-    top: 80px;
+    font-size: 2.3rem;
+    width: 30%;
+    top: 37%;
     left: 44px;
   }
 `;
