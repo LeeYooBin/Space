@@ -4,15 +4,25 @@ import styled from "styled-components";
 const Content = styled.div`
   width: 65vw;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   color: #d9d9d9;
   font-family: "GandhiSansRegular";
   font-size: 16px;
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+  }
 `;
 
 const P = styled.p`
   font-size: 1.25rem;
+  margin-bottom: 2.5vh;
+
+  @media screen and (min-width: 1000px) {
+    margin: 0;
+  }
 `;
 
 const List = styled.ul`
@@ -20,7 +30,11 @@ const List = styled.ul`
   width: 380px;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  @media screen and (min-width: 1000px) {
+    justify-content: space-between;
+  }
 `;
 
 const Item = styled.li`
