@@ -9,8 +9,6 @@ const Content = styled.li`
   border-radius: 20px;
   height: 280px;
   width: 285px;
-  margin-right: 1rem;
-  margin-bottom: 1.35rem;
   cursor: pointer;
 
   :hover {
