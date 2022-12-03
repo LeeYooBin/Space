@@ -4,7 +4,7 @@ import Img3 from "../assets/imgs/pop/foto-3.png";
 import Img4 from "../assets/imgs/pop/foto-4.png";
 import Img5 from "../assets/imgs/pop/foto-5.png";
 
-const Pops = [
+const PopsImages = [
   {
     image: Img1,
     id: "1",
@@ -32,4 +32,4 @@ const Pops = [
   },
 ];
 
-export default Pops;
+export default PopsImages;
