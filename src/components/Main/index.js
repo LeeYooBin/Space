@@ -3,10 +3,10 @@ import styled from "styled-components";
 import Menu from "../Menu";
 import Banner from "../Banner";
 import Gallery from "../Gallery";
+import Pops from "../Pops";
 
 const Content = styled.main`
   max-width: 100vw;
-  // padding: 0 24px;
   padding: 0 10px;
 
   @media screen and (min-width: 1000px) {
@@ -17,7 +17,6 @@ const Content = styled.main`
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  // align-items: flex-start;
   justify-content: space-between;
   margin-top: 2rem;
 
@@ -27,13 +26,23 @@ const Wrapper = styled.section`
   }
 `;
 
+const GalleryWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1rem;
+`;
+
 const Main = () => (
   <Content>
     <Wrapper>
       <Menu />
       <Banner />
     </Wrapper>
-    <Gallery />
+    <GalleryWrapper>
+      <Gallery />
+      <Pops />
+    </GalleryWrapper>
   </Content>
 );
 
