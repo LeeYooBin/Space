@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Tags from "../Tags";
 import Photo from "../Photo";
@@ -9,8 +9,6 @@ const Content = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // align-items: flex-start;
-  // margin: 5vh 0 0 15%;
   margin: 5vh 0 0 0;
   font-family: "GandhiSansRegular";
 
@@ -42,21 +40,32 @@ const Cards = styled.ul`
   }
 `;
 
-const Gallery = () => (
-  <Content>
-    <H2>Browse the gallery</H2>
-    <Tags />
-    <Cards>
-      {Images.map((item) => (
-        <Photo
-          key={item.id}
-          image={item.image}
-          title={item.title}
-          credits={item.credits}
-        />
-      ))}
-    </Cards>
-  </Content>
-);
+const Gallery = () => {
+  const [items, setItems] = useState(Images);
+  const tags = ["All", ...new Set(Images.map((item) => item.tag))];
+
+  const filterImages = (tag) => {
+    const newImages =
+      tag === "All" ? Images : Images.filter((image) => image.tag === tag);
+    setItems(newImages);
+  };
+
+  return (
+    <Content>
+      <H2>Browse the gallery</H2>
+      <Tags tags={tags} action={filterImages} />
+      <Cards>
+        {items.map((item) => (
+          <Photo
+            key={item.id}
+            image={item.image}
+            title={item.title}
+            credits={item.credits}
+          />
+        ))}
+      </Cards>
+    </Content>
+  );
+};
 
 export default Gallery;
