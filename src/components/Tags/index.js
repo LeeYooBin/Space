@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const Content = styled.div`
   width: 65vw;
@@ -44,16 +45,22 @@ const Item = styled.li`
   cursor: pointer;
 `;
 
-const Tags = () => (
+const Tags = ({ tags, action }) => (
   <Content>
     <P>Filter by tags</P>
     <List>
-      <Item>Stars</Item>
-      <Item>Galaxies</Item>
-      <Item>Moons</Item>
-      <Item>Planets</Item>
+      {tags.map((tag) => (
+        <Item key={tag} onClick={() => action(tag)}>
+          {tag}
+        </Item>
+      ))}
     </List>
   </Content>
 );
+
+Tags.propTypes = {
+  tags: PropTypes.string,
+  action: PropTypes.func,
+};
 
 export default Tags;
